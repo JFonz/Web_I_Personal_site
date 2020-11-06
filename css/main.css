@@ -1,3 +1,47 @@
-div{
-    border: 3px solid blue;
+#content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header{
+    border: 1px solid red;
+    grid-column: span 3;
+}
+
+main{
+    border: 1px solid blue;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+}
+
+#home{
+    border:1px solid red;
+    display: block;
+}
+
+#members{
+    border: 1px solid black;
+    display:none;
+}
+
+#videos{
+    border: 1px solid grey;
+    display:none;
+}
+
+nav{
+    border: 1px solid black;
+    grid-column: 1 / 2;
+}
+
+input{
+    margin: 10px;
+}
+
+footer{
+    border: 1px solid orange;
+    grid-column: span 3;
 }
