@@ -8,13 +8,21 @@
 
 header{
     border: 1px solid red;
-    grid-column: span 3;
+    grid-column: span 3;;
 }
 
 main{
     border: 1px solid blue;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
+}
+
+aside{
+    width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
 }
 
 #home{
@@ -35,6 +43,7 @@ main{
 nav{
     border: 1px solid black;
     grid-column: 1 / 2;
+    background-color: darkblue;
 }
 
 input{
@@ -44,4 +53,5 @@ input{
 footer{
     border: 1px solid orange;
     grid-column: span 3;
+    background-color: crimson;
 }

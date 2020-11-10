@@ -1,30 +1,30 @@
 function btnClicked(clicked){
     // put buttons into variables
-    var home = document.getElementById("btnh");
-    var members = document.getElementById("btnmem");
-    var videos = document.getElementById("btnv");
+    var home = document.getElementById("home");
+    var members = document.getElementById("members");
+    var videos = document.getElementById("videos");
 
     //use switch statement to show correct content and hide the rest
     switch(clicked){
         case "btnh":
-            home.style.display = block;
-            members.style.display = hidden;
-            videos.style.display = hidden;
+            home.style.display = "block";
+            members.style.display = "hidden";
+            videos.style.display = "hidden";
             break;
         case "btnm":
-            home.style.display = hidden;
-            members.style.display = block;
-            videos.style.display = hidden;
+            home.style.display = "hidden";
+            members.style.display = "block";
+            videos.style.display = "hidden";
             break;
         case "btnv":
-            home.style.display = hidden;
-            members.style.display = hidden;
-            videos.style.display = block;
+            home.style.display = "hidden";
+            members.style.display = "hidden";
+            videos.style.display = "block";
             break;
         default:
-            home.style.display = block;
-            members.style.display = hidden;
-            videos.style.display = hidden;
+            home.style.display = "block";
+            members.style.display = "hidden";
+            videos.style.display = "hidden";
             break;
     }
 }
