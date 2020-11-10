@@ -1,37 +1,24 @@
-function btnClicked(clicked){
-    // put buttons into variables
-    var home = document.getElementById("home");
-    var members = document.getElementById("members");
-    var videos = document.getElementById("videos");
+function showh(){
+    document.getElementById("home").style.display = "block";
+    document.getElementById("members").style.display = "none";
+    document.getElementById("videos").style.display = "none";
+}
 
-    //use switch statement to show correct content and hide the rest
-    switch(clicked){
-        case "btnh":
-            home.style.display = "block";
-            members.style.display = "hidden";
-            videos.style.display = "hidden";
-            break;
-        case "btnm":
-            home.style.display = "hidden";
-            members.style.display = "block";
-            videos.style.display = "hidden";
-            break;
-        case "btnv":
-            home.style.display = "hidden";
-            members.style.display = "hidden";
-            videos.style.display = "block";
-            break;
-        default:
-            home.style.display = "block";
-            members.style.display = "hidden";
-            videos.style.display = "hidden";
-            break;
-    }
+function showm(){
+    document.getElementById("home").style.display = "none";
+    document.getElementById("members").style.display = "block";
+    document.getElementById("videos").style.display = "none";
+}
+
+function showv(){
+    document.getElementById("home").style.display = "none";
+    document.getElementById("members").style.display = "none";
+    document.getElementById("videos").style.display = "block";
 }
 
 window.addEventListener("DOMContentLoaded", function(){
     //add event listeners
-    document.getElementById("btnh").addEventListener("click", function(){btnClicked("btnh");});
-    document.getElementById("btnm").addEventListener("click", function(){btnClicked("btnm");});
-    document.getElementById("btnv").addEventListener("click", function(){btnClicked("btnv");});
+    document.getElementById("btnh").addEventListener("click", showh);
+    document.getElementById("btnm").addEventListener("click", showm);
+    document.getElementById("btnv").addEventListener("click", showv);
 });
