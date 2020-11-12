@@ -21,8 +21,7 @@ aside{
     width: 30%;
   padding-left: 15px;
   margin-left: 15px;
-  float: right;
-  font-style: italic;
+  float: left;
 }
 
 #home{
@@ -43,7 +42,18 @@ aside{
 nav{
     border: 1px solid black;
     grid-column: 1 / 2;
-    background-color: darkblue;
+}
+
+#btnh{
+    background-color: blue;
+}
+
+#btnm{
+    background-color: firebrick;
+}
+
+#btnv{
+    background-color: navy;
 }
 
 input{
