@@ -25,17 +25,14 @@ aside{
 }
 
 #home{
-    border:1px solid red;
     display: block;
 }
 
 #members{
-    border: 1px solid black;
     display:none;
 }
 
 #videos{
-    border: 1px solid grey;
     display:none;
 }
 
@@ -53,7 +50,7 @@ nav{
 }
 
 #btnv{
-    background-color: navy;
+    background-color: grey;
 }
 
 input{
