@@ -1,3 +1,7 @@
+body{
+    background-image: radial-gradient(red, white);
+}
+
 #content{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -7,12 +11,10 @@
 }
 
 header{
-    border: 1px solid red;
     grid-column: span 3;;
 }
 
 main{
-    border: 1px solid blue;
     grid-column: 2 / 4;
     grid-row: 2 / 4;
 }
@@ -37,7 +39,6 @@ aside{
 }
 
 nav{
-    border: 1px solid black;
     grid-column: 1 / 2;
 }
 
@@ -58,7 +59,6 @@ input{
 }
 
 footer{
-    border: 1px solid orange;
     grid-column: span 3;
     background-color: crimson;
 }
