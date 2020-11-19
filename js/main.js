@@ -1,35 +1,34 @@
 function showClicked(clicked){
-    var home = document.getElementById("home");
-    var members = document.getElementById("members");
-    var videos = document.getElementById("videos");
+    var $home = $("#home");
+    var $members = $("#members");
+    var $videos = $("#videos");
 
     switch(clicked){
         case "btnh":
-            home.style.display = "block";
-            members.style.display = "none";
-            videos.style.display = "none";
+            $home.css("display", "block");
+            $members.css("display", "none");
+            $videos.css("display", "none");
             break;
         case "btnm":
-            home.style.display = "none";
-            members.style.display = "block";
-            videos.style.display = "none";
+            $home.css("display", "none");
+            $members.css("display", "block");
+            $videos.css("display", "none");
             break;
         case "btnv":
-            home.style.display = "none";
-            members.style.display = "none";
-            videos.style.display = "block";
+            $home.css("display", "none");
+            $members.css("display", "none");
+            $videos.css("display", "block");
             break;
         default:
-            home.style.display = "block";
-            members.style.display = "none";
-            videos.style.display = "none";
+            $home.css("display", "block");
+            $members.css("display", "none");
+            $videos.css("display", "none");
             break;
     }
 }
 
-window.addEventListener("DOMContentLoaded", function(){
-    //add event listeners
-    document.getElementById("btnh").addEventListener("click", function(){showClicked("btnh");});
-    document.getElementById("btnm").addEventListener("click", function(){showClicked("btnm");});
-    document.getElementById("btnv").addEventListener("click", function(){showClicked("btnv");});
-});
+$(document).ready(function() {
+    $("#btnh").click(function(){showClicked("btnh")});
+    $("#btnm").click(function(){showClicked("btnm")});
+    $("#btnv").click(function(){showClicked("btnv")});
+})
