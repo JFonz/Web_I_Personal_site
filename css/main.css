@@ -94,7 +94,6 @@ form {
   }
   
   input.was-validated:invalid {
-    color: red;
     border: 1px solid red;
   }
   

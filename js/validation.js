@@ -24,7 +24,7 @@ function initValidation(formName) {
   
   $("#myform").submit(function(event){
     $form = $("#myform");
-    formEl=$form.get(0);
+    let formEl=$form.get(0);
 
     event.preventDefault();  //prevent default browser submit
     event.stopPropagation(); //stop event bubbling
@@ -35,9 +35,10 @@ function initValidation(formName) {
       $(":input").addClass("was-validated")
     }
     else{
-      //TODO
       //hide form
       //show thank you message
+      $form.css("display", "none");
+      $form.after("<h2>Thank You!</h2>");
     }
    
 
@@ -90,12 +91,11 @@ function setElementValidity(fieldName, valid, message){
   let $field=$(fieldName);
   let el = $field.get(0);
   if (valid) {  //it has a value
-
-    el.setCustomValidity('');  //sets to no error message and field is valid
+    el.setCustomValidity('');  //sets to no error message and field is valid   
   } else {
 
     el.setCustomValidity(message);   //sets error message and field gets 'invalid' stat
-   
+    $field.addClass("error");    
   }
   
 }
