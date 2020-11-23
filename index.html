@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>VoicePlay</title>
     <link rel="stylesheet" href="css/main.css"/>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="js/main.js"></script>
   </head>
   <body>
     <div id="content">
@@ -42,10 +43,81 @@
           </figure>
         </section>
         <section id="videos">
-          <h3>VoicePlay's newest video</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/P8STSy-S5UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <h2>Kidnapp the Sandy Claws</h2>
+          <iframe id="sandy" width="560" height="315" src="https://www.youtube.com/embed/P8STSy-S5UA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <h3>Solo song by Geoff Castellucci, Bass of VoicePlay</h3>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8rrg0ksSQdw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="horseman" width="560" height="315" src="https://www.youtube.com/embed/8rrg0ksSQdw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="log-visit">
+          <div class="container">
+            <h1>Visitor Form</h1>
+            <div class="successMsg" style="display:none">
+              Thank you for logging your visit!
+            </div>
+            <form id="myform" novalidate>
+              <ul class="flex">
+                <li class="section-display">
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" name="first-name" placeholder="Enter your first name here" minlength="1" required>
+                  <div class="errorMsg">First Name is Required</div>
+                </li>
+                <li >
+                  <label for="last-name">Last Name</label>
+                  <input type="text"  id="last-name" name="last-name" placeholder="Enter your last name here" minlength="1" required>
+                  <div class="errorMsg">Last Name is Required</div>
+                </li>
+                <li >
+                  <label for="address">Address</label>
+                  <input type="text"  id="address" name="address" placeholder="Enter your address here" minlength="1" pattern="^[a-zA-Z0-9\s,'-]*$" required>
+                  <div class="errorMsg">Address is Required</div>
+                </li>
+                <li >
+                  <label for="city">City</label>
+                  <input type="text"  id="city" name="city" placeholder="Enter your city here" minlength="1" required>
+                  <div class="errorMsg">City is Required</div>
+                </li>
+                <li >
+                  <label for="state">State</label>
+                  <input type="text"  id="state"  name="state" placeholder="Enter your state here" minlength="2" maxlength="2">
+                  <div class="errorMsg">Please enter a two character state code</div>
+                </li>
+                <li >
+                  <label for="zip">Zip</label>
+                  <input id="zip" name="zip" type="text" placeholder="Enter a zip code here" required>
+                  <div class="errorMsg">You must enter a valid Zip Code</div>
+                </li>
+                <li >
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email here" pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" required>
+                  <div class="errorMsg">You must enter a valid email</div>
+                </li>
+                <li>
+                  <label for="phone">Phone</label>
+                  <input type="phone" id="phone" placeholder="Enter your phone here" pattern="/\d{5}-*\d*/" required>
+                  <div class="errorMsg">You must enter a valid phone number</div>
+                </li>
+                <li>
+                  <h2>How did you find my page</h2>
+                </li>
+                <li>
+                  <input type="checkbox" id='google' name='find-page' value="google">
+                  <label for="google">Google Search</label>
+                </li>
+                <li>
+                  <input type="checkbox" id='friend' name='find-page' value="friend">
+                  <label for="friend">Friend</label>
+                </li>
+                <li>
+                  <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
+                  <label for="newspaper">News Paper</label>
+                  <div class="errorMsg">You must check at least one</div>
+                </li>
+                <li>
+                  <button id="submitBtn" type="submit">Send</button>
+                </li>
+              </ul>
+            </form>
+            </div>
         </section>
       </main>
 
@@ -59,6 +131,9 @@
         <div>
           <input type="button" value="Videos" id="btnv">
         </div>
+        <div>
+          <input type="button" value="Log Visit" id="btnlv">
+        </div>
       </nav>
 
       <footer>
@@ -66,4 +141,12 @@
       </footer>
     </div>
   </body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/validation.js"></script>
+  <script>
+    $(document).ready(function() {
+      initValidation("#myform");
+    });
+  </script>
 </html>
