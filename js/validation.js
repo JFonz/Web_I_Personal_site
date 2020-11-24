@@ -94,8 +94,7 @@ function setElementValidity(fieldName, valid, message){
     el.setCustomValidity('');  //sets to no error message and field is valid   
   } else {
 
-    el.setCustomValidity(message);   //sets error message and field gets 'invalid' stat
-    $field.addClass("error");    
+    el.setCustomValidity(message);   //sets error message and field gets 'invalid' stat    
   }
   
 }
