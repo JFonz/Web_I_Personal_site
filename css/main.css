@@ -60,18 +60,30 @@ nav{
 
 #btnh{
     background-color: blue;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
 }
 
 #btnm{
     background-color: firebrick;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
 }
 
 #btnv{
     background-color: grey;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
 }
 
 #btnlv {
     background-color: #2196F3;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
 }
 
 input{
