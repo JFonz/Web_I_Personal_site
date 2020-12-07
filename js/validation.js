@@ -35,10 +35,8 @@ function initValidation(formName) {
       $(":input").addClass("was-validated")
     }
     else{
-      //hide form
-      //show thank you message
-      $form.css("display", "none");
-      $form.after("<h2>Thank You!</h2>");
+
+      submitForm();
     }
    
 

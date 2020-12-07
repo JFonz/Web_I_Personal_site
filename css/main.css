@@ -54,6 +54,21 @@ aside{
     display: none;
 }
 
+#visitors {
+  display: none;
+}
+
+#nVisitor {
+    background-color: #cc0066;
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px white;
+}
+
+tr:hover {
+  background-color: aqua;
+}
+
 nav{
     grid-column: 1 / 2;
 }
